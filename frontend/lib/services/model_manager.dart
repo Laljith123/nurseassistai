@@ -23,8 +23,8 @@ enum ModelStatus {
 /// task file is managed separately by [LlmService], so model updates cannot
 /// accidentally download the multi-gigabyte task model.
 class ModelManager extends ChangeNotifier {
-  static const String _repoOwner = 'laljith-gamer';
-  static const String _repoName = 'NurseAssist_AI';
+  static const String _repoOwner = 'Laljith123';
+  static const String _repoName = 'nurseassistai';
   static final RegExp _nlpZipName = RegExp(
     r'^nurseassist-observation-model-.+\.zip$',
   );

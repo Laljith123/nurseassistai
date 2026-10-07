@@ -29,8 +29,8 @@ export default {
     }
 
     // Write to the telemetry-intake branch in ml_pipeline/telemetry_drop/
-    const repoOwner = env.REPO_OWNER || "laljith-gamer";
-    const repoName = env.REPO_NAME || "NurseAssist_AI";
+    const repoOwner = env.REPO_OWNER || "Laljith123";
+    const repoName = env.REPO_NAME || "nurseassistai";
     const branchName = "telemetry-intake";
     const timestamp = Date.now();
     

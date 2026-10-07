@@ -86,8 +86,8 @@ class Settings(BaseSettings):
     
     # GitHub Actions Integration
     GITHUB_TOKEN: Optional[str] = None
-    GITHUB_OWNER: str = "laljith-gamer"
-    GITHUB_REPOSITORY: str = "NurseAssist_AI"
+    GITHUB_OWNER: str = "Laljith123"
+    GITHUB_REPOSITORY: str = "nurseassistai"
     GITHUB_WORKFLOW_ID: str = "train-models.yml"
 
     # ── MLP Training Configuration ──────────────────────────────────────

@@ -10,7 +10,7 @@
 | M4 | Fetch Gemma 2 2B INT8 directly from Hugging Face. | Clean install launches and initializes the model directly from Hugging Face CDN. | Implemented |
 | M5 | Keep chats, nursing observations, and AI context strictly patient-scoped. | Switch between two patients; verify New chat, History, notes, and model context never cross patients. | Implemented; needs device verification |
 | M6 | Improve UI aesthetics to a professional standard and upgrade all Flutter dependencies to recent versions. | Visual review of glassmorphism/typography and `flutter pub outdated` shows no major stragglers. | Completed |
-| M7 | Build and install a release APK. | `flutter build apk --release` from `frontend`. | Pending |
+| M7 | Build and install a release APK. | Build-apk GitHub Actions workflow and APK artifact generation. | Implemented |
 | M8 | Create GitHub Actions workflow to build and store iOS IPA. | Verify `ios-ipa` artifact in GitHub Actions. | Implemented |
 
 ## Current decision
@@ -36,6 +36,7 @@ Any AI agent working on this repository MUST abide by these architectural constr
 
 ## Recent Activity Log
 
+- 2026-10-07: Added automated Android APK release GitHub Actions workflow (.github/workflows/build-apk.yml) with release asset uploading, configured release trigger on iOS workflow, verified file integrity between NurseAssist_AI and nurseassistai, bumped app version to 1.1.0+2, and updated all repo references to Laljith123/nurseassistai.
 - 2026-10-07: Configured repository remote to point to https://github.com/Laljith123/nurseassistai.git, resolved git remote mismatch causing GitHub Desktop 404 error dialog, and cleaned corrupted .gitignore to prevent accidental upload of 550MB model tasks and local build artifacts.
 - 2026-08-18: Restored the on-device LLM as the primary intent classifier and data extractor. The app now asks the LLM to output structured JSON with the identified intent, parsed vitals/meds, and conversational reply. The deterministic regex parser is retained strictly as an offline fallback.
 - 2026-08-18: Upgraded to Gemma 2 2B INT8 via ungated HF bucket to fix HTTP 401 errors, forced CPU backend on iOS to prevent Jetsam OOM limits, updated LLM prompts with few-shot examples, and downgraded permission_handler to 11.3.1.
