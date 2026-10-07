@@ -3,8 +3,8 @@
 - target: Fix rigid regex constraints, improve on-device Gemma comprehension, add offline terminology
 - iteration: 12
 - last_gate: User feedback requesting natural conversation, offline dictionary, and ML reinforcement
-- last_action: "Restored the on-device LLM as the primary intent classifier and data extractor, bypassing hardcoded regex constraints, while keeping the regex parser strictly as an offline fallback."
-- next_action: "Wait for further user feedback, verify the LLM json generation on device, or proceed to release APK (M7)."
+- last_action: "Fixed remote URL to point to https://github.com/Laljith123/nurseassistai.git, resolved GitHub Desktop repository not found error, and cleaned .gitignore to exclude 550MB .task file."
+- next_action: "User pushes to origin main via GitHub Desktop or git credentials."
 - model: `compact_clinical_mlp` (Sklearn MLP, compact (256,128) TF-IDF student distilled from BERT teacher)
 - sidecar_data: Microsoft SYNUR + MTSamples with negation-aware weak supervision
 - tokens_used: not tracked
